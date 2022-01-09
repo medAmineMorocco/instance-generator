@@ -28,8 +28,8 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="generate-instance" class="com.plugin.actions.GenerateInstanceAction" text="generate instance"
-            description="generate an instance of a bean">
+    <action id="generate-instance" class="com.plugin.actions.GenerateInstanceAction" text="Generate Instance"
+            description="Generate an instance of a bean">
       <add-to-group group-id="GenerateGroup" anchor="first"/>
     </action>
   </actions>
