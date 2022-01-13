@@ -1,7 +1,10 @@
 package com.plugin;
 
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 
+@AllArgsConstructor
 public class Person {
 
     private String firstName;
@@ -22,5 +25,11 @@ public class Person {
 
     class Book {
         private String name;
+    }
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 }

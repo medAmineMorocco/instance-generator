@@ -30,6 +30,10 @@ public class Field {
         return type;
     }
 
+    public String getSubClassName() {
+        return subClassName;
+    }
+
     @Override
     public String toString() {
         return "Field{" +
@@ -38,4 +42,5 @@ public class Field {
                 ", subClassName='" + subClassName + '\'' +
                 '}';
     }
+
 }

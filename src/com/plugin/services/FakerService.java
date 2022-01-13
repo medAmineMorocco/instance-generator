@@ -9,8 +9,7 @@ import java.util.Map;
 
 public class FakerService {
 
-    private Faker faker = new Faker();
-
+    private final Faker faker = new Faker();
 
     public Object getFakeForField(String field) {
         HashMap<String, List<Object>> config = new HashMap(){{
@@ -32,10 +31,4 @@ public class FakerService {
     }
 
 
-//    public String getFakesForField(String field) {
-//        return fields.stream()
-//                .map(this::getFakeForField)
-//                .reduce((field1, field2) -> field1 + "," + field2)
-//                .orElse(null);
-//    }
 }
