@@ -39,7 +39,7 @@ public class ClassService {
                     return mappedValue;
                 })
                 .reduce((value1, value2) -> value1 + ", " + value2)
-                .orElse(null);
+                .orElse("");
 
         return "new " + bean + "(" + values + ")";
     }
