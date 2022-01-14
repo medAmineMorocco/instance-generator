@@ -50,9 +50,9 @@ public class ClassService {
             instances.add(getInstance(bean, parameters));
         }
         String result = instances.stream()
-                                 .reduce((value1, value2) -> value1 + ", " + value2)
+                                 .reduce((value1, value2) -> value1 + ",\n" + value2)
                                  .orElse("");
-        return "Arrays.asList(" + result + ")";
+        return "Arrays.asList(\n" + result + "\n)";
     }
 
     public List<Field> getParametersOfLongestConstructor(Class aClass) throws IOException {
