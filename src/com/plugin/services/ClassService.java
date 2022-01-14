@@ -30,7 +30,10 @@ public class ClassService {
                     if ("String".equals(field.getType())) {
                         mappedValue = "\"" + value + "\"";
                     }
-                    else if ("List".equals(field.getType())) {
+                    else if ("List".equals(field.getType()) && "String".equals(field.getSubClassName())) {
+                            mappedValue = "Arrays.asList(\"\")";
+                    }
+                    else if ("List".equals(field.getType()) && !"String".equals(field.getSubClassName())) {
                         mappedValue = "Arrays.asList(" + "new " + field.getSubClassName() + "()" + ")";
                     }
                     else if (field.getType() != null && !"List".equals(field.getType()) && !"String".equals(field.getType())) {
