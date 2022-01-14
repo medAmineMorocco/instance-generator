@@ -5,11 +5,16 @@ import com.plugin.utils.StringUtils;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class FakerService {
 
-    private final Faker faker = new Faker();
+    private final Faker faker;
+
+    public FakerService(String localeCode) {
+        faker = new Faker(new Locale(localeCode));
+    }
 
     public Object getFakeForField(String field) {
         HashMap<String, List<Object>> config = new HashMap(){{

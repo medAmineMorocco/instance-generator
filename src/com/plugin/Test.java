@@ -8,7 +8,9 @@ import java.util.List;
 
 public class Test {
 
-    private static ClassService classService = new ClassService();
+    public static final String LOCALE_CODE = "en";
+
+    private static ClassService classService = new ClassService(LOCALE_CODE);
 
     public static void main(String[] args) {
         String bean = Person.class.getSimpleName();

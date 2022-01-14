@@ -16,7 +16,11 @@ import static java.util.Collections.emptyList;
 
 public class ClassService {
 
-    private final FakerService fakerService = new FakerService();
+    private final FakerService fakerService;
+
+    public ClassService(String localeCode) {
+        fakerService = new FakerService(localeCode);
+    }
 
     public String getInstance(String bean, List<Field> parameters) {
         String values = parameters
